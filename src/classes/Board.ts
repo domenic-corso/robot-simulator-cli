@@ -27,7 +27,7 @@ class Board {
      * @param  {number} y
      * @returns boolean
      */
-    private inBounds (x: number, y: number): boolean {
+    public inBounds (x: number, y: number): boolean {
         return (x >= 0 && x < this.size) && (y >= 0 && y < this.size)
     }
 
