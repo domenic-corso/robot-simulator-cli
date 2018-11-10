@@ -38,7 +38,7 @@ class Board {
      * @param  {BoardPiece} piece
      * @returns boolean
      */
-    private hasPiece (piece: BoardPiece): boolean {
+    public hasPiece (piece: BoardPiece): boolean {
         for (let x = 0; x < this.size; x++) {
             for (let y = 0; y < this.size; y++) {
                 if (this.grid[x][y] === piece) {
@@ -58,7 +58,7 @@ class Board {
      * @param  {number} y
      * @returns BoardPiece
      */
-    private getPieceAt (x: number, y: number): BoardPiece {
+    public getPieceAt (x: number, y: number): BoardPiece {
         if (!this.inBounds(x, y)) {
             return null
         }
@@ -79,7 +79,7 @@ class Board {
         }
 
         this.grid[x][y] = piece
-        
+
         return true
     }
 }
