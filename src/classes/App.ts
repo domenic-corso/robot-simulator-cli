@@ -24,7 +24,7 @@ class App {
      * 
      * @returns x
      */
-    private determineMoveDifference () : {x, y} {
+    private determineMoveDifference (): {x, y} {
         switch (this.robotPiece.direction) {
             case BoardDirection.North:
             return {
