@@ -1,0 +1,24 @@
+{
+  "name": "robot-simulator-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/main.js",
+    "build": "tsc src/main.ts --outDir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domenic-corso/robot-simulator-cli.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/domenic-corso/robot-simulator-cli/issues"
+  },
+  "homepage": "https://github.com/domenic-corso/robot-simulator-cli#readme",
+  "dependencies": {
+    "@types/node": "^10.12.5",
+    "typescript": "^3.1.6"
+  }
+}
