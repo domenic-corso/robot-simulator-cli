@@ -1,3 +1,5 @@
+import { mod as modulus } from 'mathjs'
+
 import Robot from './Robot'
 import Board from './Board'
 import BoardDirection from '../enums/BoardDirection';
@@ -15,7 +17,7 @@ class App {
         this.robot = new Robot()
         this.robotPiece = new BoardPiece(this.robot)
     }
-    
+
     /**
      * Determines the difference in coordinates based on the
      * current direction of the board piece
@@ -90,6 +92,24 @@ class App {
         }
 
         this.board.placePiece(this.robotPiece, newCoordinate.x, newCoordinate.y)
+    }
+
+    /**
+     * Rotates the direction of the board piece left.
+     * 
+     * @returns void
+     */
+    public left (): void {
+        this.robotPiece.direction = modulus(this.robotPiece.direction - 1, 4)
+    }
+
+    /**
+     * Rotates the direction of the board piece right.
+     * 
+     * @returns void
+     */
+    public right (): void {
+        this.robotPiece.direction = modulus(this.robotPiece.direction + 1, 4)
     }
 }
 

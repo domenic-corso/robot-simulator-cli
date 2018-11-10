@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/domenic-corso/robot-simulator-cli#readme",
   "dependencies": {
+    "@types/mathjs": "^4.4.3",
     "@types/node": "^10.12.5",
+    "mathjs": "^5.2.3",
     "typescript": "^3.1.6"
   }
 }
