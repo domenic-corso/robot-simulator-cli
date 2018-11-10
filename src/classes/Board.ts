@@ -85,7 +85,7 @@ class Board {
      * @returns boolean
      */
     public placePiece (piece: BoardPiece, x: number, y: number): boolean {
-        if (this.getPieceAt(x, y) !== null) {
+        if (this.getPieceAt(x, y) !== null || !this.inBounds(x, y)) {
             return false
         }
 
