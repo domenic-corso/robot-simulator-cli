@@ -100,7 +100,7 @@ class App {
      * @returns void
      */
     public left (): void {
-        this.robotPiece.direction = modulus(this.robotPiece.direction - 1, 4)
+        this.robotPiece.direction = modulus(this.robotPiece.direction - 1, 4) as number
     }
 
     /**
@@ -109,7 +109,7 @@ class App {
      * @returns void
      */
     public right (): void {
-        this.robotPiece.direction = modulus(this.robotPiece.direction + 1, 4)
+        this.robotPiece.direction = modulus(this.robotPiece.direction + 1, 4) as number
     }
 }
 
