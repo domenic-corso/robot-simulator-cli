@@ -41,7 +41,7 @@ class Board {
     public hasPiece (piece: BoardPiece): boolean {
         return this.getCoordinatesOf(piece) !== null
     }
-    
+
     /**
      * Gets the coordinates of a given piece on the board. Returns
      * null if not found.
@@ -84,7 +84,7 @@ class Board {
      * @param  {BoardPiece} piece
      * @returns boolean
      */
-    public addPiece (piece: BoardPiece, x: number, y: number): boolean {
+    public placePiece (piece: BoardPiece, x: number, y: number): boolean {
         if (this.getPieceAt(x, y) !== null || this.hasPiece(piece)) {
             return false
         }
