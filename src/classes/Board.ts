@@ -78,15 +78,24 @@ class Board {
     }
 
     /**
-     * Adds a board piece to the board. Returns true on success and
-     * false on failure.
+     * Places a board piece to the board. Works with new or existing
+     * pieces. Returns true on success, false on failure.
      * 
      * @param  {BoardPiece} piece
      * @returns boolean
      */
     public placePiece (piece: BoardPiece, x: number, y: number): boolean {
-        if (this.getPieceAt(x, y) !== null || this.hasPiece(piece)) {
+        if (this.getPieceAt(x, y) !== null) {
             return false
+        }
+
+        const existingCoordinate = this.getCoordinatesOf(piece)
+
+        // If the given piece is already on the board then remove
+        // it from it's current coordinate before moving it to its
+        // new coordinate
+        if (existingCoordinate !== null) {
+            this.grid[existingCoordinate.x][existingCoordinate.y] = null
         }
 
         this.grid[x][y] = piece
