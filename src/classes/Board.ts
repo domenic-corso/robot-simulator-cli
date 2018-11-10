@@ -39,15 +39,26 @@ class Board {
      * @returns boolean
      */
     public hasPiece (piece: BoardPiece): boolean {
+        return this.getCoordinatesOf(piece) !== null
+    }
+    
+    /**
+     * Gets the coordinates of a given piece on the board. Returns
+     * null if not found.
+     * 
+     * @param  {BoardPiece} piece
+     * @returns {x, y}
+     */
+    public getCoordinatesOf (piece: BoardPiece): {x, y} {
         for (let x = 0; x < this.size; x++) {
             for (let y = 0; y < this.size; y++) {
                 if (this.grid[x][y] === piece) {
-                    return true
+                    return {x, y}
                 }
             }
         }
-        
-        return false
+
+        return null
     }
 
     /**
