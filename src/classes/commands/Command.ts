@@ -13,6 +13,13 @@ abstract class Command {
      * @returns boolean
      */
     public try (userInput: string): boolean {
+        const matched: boolean = this.pattern.test(userInput)
+
+        if (matched) {
+            this.callback()
+            return true
+        }
+
         return false
     }
 }
