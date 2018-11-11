@@ -1,5 +1,5 @@
-import BoardPieceItem from "../interfaces/BoardPieceItem";
+import PlaceableOnBoard from "../interfaces/PlaceableOnBoard";
 
-class Robot implements BoardPieceItem {}
+class Robot implements PlaceableOnBoard {}
 
 export default Robot
