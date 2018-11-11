@@ -53,6 +53,16 @@ class App {
             y: 0
         }
     }
+    
+    /**
+     * Determines whether or not the robot has been previously
+     * placed on the board.
+     * 
+     * @returns boolean
+     */
+    public robotHasBeenPlaced (): boolean {
+        return this.board.hasPiece(this.robotPiece)
+    }
 
     /**
      * Places the robot on a given (x, y) coordinate, facing a given

@@ -27,6 +27,11 @@ const promptForCommand = () => {
         let isInvalidCommand = true
 
         for (const command of commands) {
+            if (!(command instanceof PlaceCommand) && !app.robotHasBeenPlaced()) {
+                console.log('Robot needs to be placed before you do anything else.')
+                break
+            }
+
             const commandResult: boolean = command.try(userInput)
 
             if (commandResult === true) {
