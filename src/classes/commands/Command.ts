@@ -6,6 +6,12 @@ abstract class Command {
         this.callback = callback
     }
 
+    /**
+     * Tries to execute this command based on user input.
+     * 
+     * @param  {string} userInput
+     * @returns boolean
+     */
     public try (userInput: string): boolean {
         return false
     }

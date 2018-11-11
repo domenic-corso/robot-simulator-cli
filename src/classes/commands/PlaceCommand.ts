@@ -8,6 +8,12 @@ class PlaceCommand extends Command {
         this.pattern = /^PLACE (\d+),(\d+),(NORTH|EAST|SOUTH|WEST)$/i
     }
 
+    /**
+     * Tries to execute this command based on user input.
+     * 
+     * @param  {string} userInput
+     * @returns boolean
+     */
     public try (userInput: string): boolean {
         const matches: RegExpExecArray = this.pattern.exec(userInput)
 
