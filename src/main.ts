@@ -7,13 +7,16 @@ import MoveCommand from './classes/commands/MoveCommand';
 import LeftCommand from './classes/commands/LeftCommand';
 import RightCommand from './classes/commands/RightCommand';
 import ReportCommand from './classes/commands/ReportCommand';
+import BoardRenderer from './classes/BoardRenderer';
+import ConsoleBoardRenderer from './classes/ConsoleBoardRenderer';
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
 
-const app = new App()
+const app: App = new App()
+const boardRenderer: BoardRenderer = new ConsoleBoardRenderer(app.getBoard())
 const commands: Command[] = [
     new PlaceCommand((x, y, direction) => app.place(x, y, direction)),
     new MoveCommand(() => app.move()),
@@ -36,6 +39,7 @@ const promptForCommand = () => {
 
             if (commandResult === true) {
                 isInvalidCommand = false
+                boardRenderer.render()
             }
         }
 

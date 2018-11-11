@@ -64,6 +64,16 @@ class App {
         return this.board.hasPiece(this.robotPiece)
     }
 
+    
+    /**
+     * Returns the Board associated with this app.
+     * 
+     * @returns Board
+     */
+    public getBoard (): Board {
+        return this.board
+    }
+
     /**
      * Places the robot on a given (x, y) coordinate, facing a given
      * direction.

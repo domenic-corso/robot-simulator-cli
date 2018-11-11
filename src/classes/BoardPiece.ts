@@ -1,11 +1,11 @@
 import BoardDirection from '../enums/BoardDirection'
-import BoardPieceItem from '../interfaces/BoardPieceItem';
+import PlaceableOnBoard from '../interfaces/PlaceableOnBoard';
 
 class BoardPiece {
     public direction: BoardDirection
-    public item: BoardPieceItem
+    public item: PlaceableOnBoard
 
-    constructor (item: BoardPieceItem) {
+    constructor (item: PlaceableOnBoard) {
         // Direction 'east' by default
         this.direction = BoardDirection.East
         this.item = item

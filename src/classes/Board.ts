@@ -20,6 +20,15 @@ class Board {
     }
 
     /**
+     * Returns the size of this board.
+     * 
+     * @returns number
+     */
+    public getSize (): number {
+        return this.size
+    }
+
+    /**
      * Determines whether or not a given (x, y) coordinate is within
      * the bounds of the board.
      * 
