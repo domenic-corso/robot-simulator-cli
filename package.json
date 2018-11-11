@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node build/main.js",
-    "build": "tsc src/main.ts --outDir build"
+    "build": "tsc src/main.ts --outDir build --lib es2015"
   },
   "repository": {
     "type": "git",

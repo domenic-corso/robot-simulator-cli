@@ -111,6 +111,20 @@ class App {
     public right (): void {
         this.robotPiece.direction = modulus(this.robotPiece.direction + 1, 4) as number
     }
+
+    public report (): void {
+        const directionText = new Map([
+            [BoardDirection.North, 'North'],
+            [BoardDirection.East, 'East'],
+            [BoardDirection.South, 'South'],
+            [BoardDirection.West, 'West'],
+        ])
+
+        const {x, y} = this.board.getCoordinatesOf(this.robotPiece)
+        const direction = directionText.get(this.robotPiece.direction)
+
+        console.log(`The robot is at (x: ${x}, y: ${y}) and is facing ${direction}`)
+    }
 }
 
 export default App
